@@ -1,0 +1,6 @@
+const PREFIX='photographic-eye-lab:' + self.registration.scope + ':';
+const CACHE=PREFIX+'v1.0.0-20261027';
+const FILES=["./","./index.html","./styles.css","./data.js","./app.js","./manifest.webmanifest","./icons/icon.svg","./scenes/scene-1.jpg","./scenes/scene-2.jpg","./scenes/scene-3.jpg","./scenes/scene-4.jpg"];
+self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES.map(file=>new Request(new URL(file,self.registration.scope),{cache:'reload'})))).then(()=>self.skipWaiting()))});
+self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith(PREFIX)&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()))});
+self.addEventListener('fetch',event=>{if(event.request.method!=='GET')return;let url=new URL(event.request.url);if(url.origin!==self.location.origin||!url.pathname.startsWith(new URL(self.registration.scope).pathname))return;if(event.request.mode==='navigate'){event.respondWith(caches.open(CACHE).then(cache=>cache.match('./index.html')).then(response=>response||fetch(event.request)));return}event.respondWith(caches.match(event.request).then(response=>response||fetch(event.request)))});

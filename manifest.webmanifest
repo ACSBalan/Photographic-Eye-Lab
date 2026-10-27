@@ -1,0 +1,20 @@
+{
+  "name": "Photographic Eye Lab",
+  "short_name": "Eye Lab",
+  "description": "Practical offline photographic seeing and composition training",
+  "id": "./",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f1f4f6",
+  "theme_color": "#141e2e",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}
