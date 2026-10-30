@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "Photo Field Guide",
+  "short_name": "Field Guide",
+  "description": "80 scene guides, practical photo fixes and field tools for your next shot.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#121714",
+  "theme_color": "#121714",
+  "lang": "en-GB",
+  "icons": [
+    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"./icons/icon-maskable.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}

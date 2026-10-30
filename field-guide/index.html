@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#121714">
+  <meta name="description" content="80 practical photography scene guides. Starting settings, composition, troubleshooting and field tools, with Sony a6700 guidance. Works offline.">
+  <meta name="application-name" content="Photo Field Guide">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Field Guide">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Photo Field Guide · Find your scene</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./icons/icon.svg">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./data.js" defer></script>
+  <script src="./reference.js" defer></script>
+  <script src="./calculators.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body data-app="photo-field-guide">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="app-shell" id="fg-shell">
+    <aside class="sidebar" aria-label="App navigation">
+      <a href="#home" class="brand" aria-label="Photo Field Guide home">
+        <img src="./icons/icon.svg" alt="" width="45" height="45">
+        <span>PHOTO<span class="brand-bottom">FIELD GUIDE</span></span>
+      </a>
+      <p class="nav-label">OUT THERE, WITH YOU</p>
+      <nav id="desktop-nav" aria-label="Main navigation"></nav>
+      <div class="sidebar-card"><span class="eyebrow">YOUR CAMERA BAG</span><strong>Sony α6700</strong><p>11 mm f/1.8<br>16–55 mm f/2.8</p><a href="#settings">Kit & app settings <span aria-hidden="true">↗</span></a></div>
+      <div class="sidebar-bottom"><span class="offline-status" data-offline-status>Preparing offline files</span><span>LOOK · SET · SHOOT · REFINE</span><small>Original guides · v1.0</small></div>
+    </aside>
+    <div class="app-body">
+      <header class="topbar">
+        <a href="#home" class="mobile-brand"><img src="./icons/icon.svg" alt="" width="32" height="32"><span>PHOTO FIELD GUIDE</span></a>
+        <span id="section-name" class="desktop-label">Your field companion</span>
+        <div class="top-actions"><span class="kit-pill">α6700 <span>· APS-C</span></span><button type="button" class="icon-button" data-action="theme" aria-label="Switch colour theme" title="Switch colour theme"></button><a href="#settings" class="icon-button" aria-label="Settings" id="settings-link"></a></div>
+      </header>
+      <main id="main" tabindex="-1"><div class="loading-state"><span class="eyebrow">PHOTO FIELD GUIDE</span><h1>Preparing your field guide…</h1><p>Scene settings, practical fixes and a better next shot.</p></div></main>
+      <footer class="app-footer"><span>Starting points. Your light makes the final decision.</span><a href="#about">Sources & photo credits</a></footer>
+    </div>
+  </div>
+  <nav class="bottom-nav" id="mobile-nav" aria-label="Mobile navigation"></nav>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="storage-alert" class="storage-alert" role="alert" hidden></div>
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+  <noscript><div class="noscript">This guide needs JavaScript enabled. Once loaded, the whole guide works offline.</div></noscript>
+</body>
+</html>
